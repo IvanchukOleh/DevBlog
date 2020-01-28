@@ -15,7 +15,7 @@ permalink: /:year/:month/:day/:title/
 
 # other links
 
-description_footer: footer description text！
+# description_footer:
 
 # comments
 # two ways to comment, only choose one, and use your own short name
