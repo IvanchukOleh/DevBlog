@@ -9,9 +9,9 @@ author: Matanist
 * content
 {:toc}
 
-![GitHub logo 1](https://github.com/IvanchukOleg/DevBlog/blob/gh-pages/images/testImage.png)
-![Alt text](https://github.com/IvanchukOleg/DevBlog/blob/gh-pages/images/testImage.png "Git hub logo 2")
+![GitHub logo 1](https://raw.githubusercontent.com/IvanchukOleg/DevBlog/gh-pages/images/testImage.png)
+![Alt text](https://raw.githubusercontent.com/IvanchukOleg/DevBlog/gh-pages/images/testImage.png "Git hub logo 2")
 
 ![Alt text][id]
 
-[id]: https://github.com/IvanchukOleg/DevBlog/blob/gh-pages/images/testImage.png  "Git hub logo 3"
+[id]: https://raw.githubusercontent.com/IvanchukOleg/DevBlog/gh-pages/images/testImage.png  "Git hub logo 3"
