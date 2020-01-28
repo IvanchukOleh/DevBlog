@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Test post"
+title:  "First post"
 categories: Unity
-tags: Unity
+tags: unity, c#
 author: Matanist
 ---
 
