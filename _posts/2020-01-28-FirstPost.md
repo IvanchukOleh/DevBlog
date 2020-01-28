@@ -2,7 +2,7 @@
 layout: post
 title:  "First post"
 categories: Unity
-tags: unity, c#
+tags: unity c#
 author: Matanist
 ---
 
