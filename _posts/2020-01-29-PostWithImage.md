@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Post with image"
-permalink: /post-with-images/
 categories: Blog
 tags: Jekull
 author: Matanist
