@@ -9,7 +9,7 @@
 title: Matanist
 brief-intro: Unity developer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "matanist.info" # the base hostname & protocol for your site
+url: "http://matanist.info" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
