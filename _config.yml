@@ -19,7 +19,7 @@ permalink: /:year/:month/:day/:title/
 
 # comments
 # two ways to comment, only choose one, and use your own short name
-#disqus_shortname: matanist
+disqus_shortname: matanist-info
 
 # Build settings
 markdown: kramdown
