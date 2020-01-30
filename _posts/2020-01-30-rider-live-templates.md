@@ -2,7 +2,7 @@
 layout: post
 title:  "Live templates"
 categories: Rider
-tags: rider, code, tip
+tags: rider code tip
 author: Matanist
 ---
 
