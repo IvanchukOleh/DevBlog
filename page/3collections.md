@@ -14,7 +14,7 @@ type: page
 
 ## YouTube
 * [Unity official](https://www.youtube.com/channel/UCG08EqOAXJk_YXPDsAvReSg "Unity official");  
-* [Brackeys, Різні цікаві і актуальні штуки по Unity](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA "Brackeys");  
-* [Sebastian Lague, Різні цікаві штуки по Unity, алгоритми](https://www.youtube.com/channel/UCmtyQOKKmrMVaKuRXz02jbQ "Sebastian Lague");  
-* [Jason Weimann, Патерни програмування в Unity](https://www.youtube.com/channel/UCX_b3NNQN5bzExm-22-NVVg "Jason Weimann");  
-* [SpeedTutor, C# і старі відео по Unity, трохи про оптимізацію](https://www.youtube.com/channel/UCwYuQIa9lgjvDiZryUVtFGw "SpeedTutor");  
+* [Brackeys, цікаві і актуальні штуки по Unity](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA "Brackeys");  
+* [Sebastian Lague, цікаві штуки по Unity, алгоритми](https://www.youtube.com/channel/UCmtyQOKKmrMVaKuRXz02jbQ "Sebastian Lague");  
+* [Jason Weimann, патерни програмування в Unity](https://www.youtube.com/channel/UCX_b3NNQN5bzExm-22-NVVg "Jason Weimann");  
+* [SpeedTutor, C#, підбірки новинок із AssetStore, трохи про оптимізацію](https://www.youtube.com/channel/UCwYuQIa9lgjvDiZryUVtFGw "SpeedTutor");  
