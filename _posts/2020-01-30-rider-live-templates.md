@@ -25,5 +25,5 @@ Settings -> Editor -> LiveTemplates -> C#
 
 ![Variables editing](/assets/2020-01_30-rider-live-templates-2.png)  
 
-  Приклад для виведення жовтих повідомлень:
+  Приклад для виведення жовтих повідомлень:  
 ```c# UnityEngine.Debug.Log("<color=yellow>$CLASS$::$MEMBER$>></color> $END$");```
