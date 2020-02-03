@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Live templates"
+title:  "Live templates in Rider"
 categories: Rider
 tags: rider code tip
 author: Matanist

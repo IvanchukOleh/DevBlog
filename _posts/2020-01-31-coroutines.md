@@ -11,7 +11,7 @@ author: Matanist
 
 ## Corutines
 
-Детальніше про те, що то таке і з чим його їдять можна почитати тут: [official Unity manual](https://docs.unity3d.com/Manual/Coroutines.html)
+Про те, що то таке і з чим його їдять можна почитати тут: [official Unity manual](https://docs.unity3d.com/Manual/Coroutines.html)
 
 Я ж детальніше розгляну різні способи їх виклику.  
 Зробити це можна такими трьома способами:
