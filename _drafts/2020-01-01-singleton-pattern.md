@@ -21,13 +21,10 @@ public class AutoCleanupSingleton<T> : MonoBehaviour where T : MonoBehaviour
         {
             if (_instance == null)
             {
-                Debug.Log("AutoCleanupSingleton::Instance>> Instance of " + nameof(T) + " is null. " +
-                          "Try to found it on the scene"); 
-                _instance = GameObject.FindObjectOfType<T>();
+                _instance = FindObjectOfType<T>();
                 if (_instance == null)
                 {
-                    Debug.Log("AutoCleanupSingleton::Instance>> Created new Instance of " + nameof(T));
-                    GameObject obj = new GameObject("Instance of " + nameof(T));
+                    GameObject obj = new GameObject("InstanceOf" + typeof(T));
                     _instance = obj.AddComponent<T>();
                 }
             }
@@ -39,9 +36,14 @@ public class AutoCleanupSingleton<T> : MonoBehaviour where T : MonoBehaviour
     protected virtual void Awake()
     {
         if (_instance != null)
-            Destroy(this);
-        
-
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = GetComponent<T>();
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }
 ```
