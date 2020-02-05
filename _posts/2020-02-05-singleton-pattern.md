@@ -10,7 +10,6 @@ author: Matanist
 {:toc}
 
 ## Singleton
-
 Патерн проектування, який гарантує, що буде створено лише один екземпляр певного класу, а також забезпечує точку доступу до нього.
 
 
@@ -18,6 +17,8 @@ author: Matanist
 
 
 Принциповою відмінністю від глобальних змінних є те, що об’єкт буде створено лише за необхідності.
+
+## Реалізація
 Найоптимальнішою і найзручнішою у використанні для мене є реалізація за допомогою [generic-класу](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-classes "Microsoft docs"):
   
 ```c#
@@ -76,16 +77,15 @@ public class SingletonClassExample : AutoCleanupSingleton<SingletonClassExample>
 ```
   
 За потреби можна вже в конкретному класі переозначити метод ```Awake()```. Використання ```virtual``` вбереже від випадкового переозначення методу ```Awake()``` і можливих помилок, пов’язаних із цим.
-Після оголошення класу таким чином доступ до змінної ```ExampleInt``` можна здійснити із будь-якого місця в коді:
+Після оголошення класу таким чином доступ до змінної ```ExampleInt``` буде із будь-якого місця в коді:
   
 ```c#
 SingletonClassExample.Instance.ExampleIntField
 ```
   
 ## Використання
-
 Використання цього патерна доречне при створенні різних ігрових менеджерів.  
 
 ## Корисні посилання
-- [metanit.com](https://metanit.com/sharp/patterns/2.3.php "Цікавий сайт із купою матеріалів по програмуванню (рос)")  
-- [Jason Weimann, YouTube](https://youtu.be/ptkxRn0HCJc "Канал із туторіалами по Unity (англ)")
+- [YouTube, Jason Weimann, особливості використання Singleton в Unity \(англ\)](https://youtu.be/ptkxRn0HCJc "Канал із туторіалами по Unity (англ)")
+- [metanit.com, стаття про Singleton \(рос\)](https://metanit.com/sharp/patterns/2.3.php "Цікавий сайт із купою матеріалів по програмуванню (рос)")  
