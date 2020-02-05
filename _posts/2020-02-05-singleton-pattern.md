@@ -2,7 +2,7 @@
 layout: post
 title:  "Singleton pattern in Unity3D"
 categories: Unity
-tags: unity c# pattern singleton code
+tags: unity c# pattern singleton
 author: Matanist
 ---
 
@@ -41,38 +41,37 @@ public class AutoCleanupSingleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
-	protected virtual void Awake()
+    protected virtual void Awake()
     {
         if (_instance != null)
         {
-			//видалення дублікатів об’єкта
+            //видалення дублікатів об’єкта
             Destroy(gameObject);
         }
         else
         {
-			//якщо екземпляр класу міститься на сцені до першого звернення через Instance, то він зберігається як єдиний
+            //якщо екземпляр класу міститься на сцені до першого звернення через Instance, то він зберігається як єдиний
             _instance = GetComponent<T>();
-			//об’єкт не видаляється при переході від одної сцени до іншої
+            //об’єкт не видаляється при переході від одної сцени до іншої
             DontDestroyOnLoad(gameObject);
         }
     }
 }
 ```
   
-Використання generic-класу дозволяє уникнути багаторазового дублювання однакового коду в кожному класі, який має бути сінглтоном.  
-Достатньо вказати, що клас буде наслідуватись від ```AutoCleanupSingleton<T>()```, де ```T``` — ім’я класу:
+Використання generic-класу дозволяє уникнути багаторазового дублювання однакового коду в кожному класі, який має бути сінглтоном. Достатньо вказати, що клас буде наслідуватись від ```AutoCleanupSingleton<T>()```, де ```T``` — ім’я класу:
   
 ```c#
 public class SingletonClassExample : AutoCleanupSingleton<SingletonClassExample>
 {
-	public int ExampleInt;
-	//...
-	protected override void Awake()
+    public int ExampleInt;
+    //...
+    protected override void Awake()
     {
         base.Awake();
-		ExampleInt = 5;
+        ExampleInt = 5;
     }
-	//...
+    //...
 }
 ```
   
@@ -83,9 +82,10 @@ public class SingletonClassExample : AutoCleanupSingleton<SingletonClassExample>
 SingletonClassExample.Instance.ExampleIntField
 ```
   
-## 
+## Використання
+
 Використання цього патерна доречне при створенні різних ігрових менеджерів.  
 
 ## Корисні посилання
-[metanit.com](https://metanit.com/sharp/patterns/2.3.php "Цікавий сайт із купою матеріалів по програмуванню (рос)")
-[Jason Weimann, YouTube](https://youtu.be/ptkxRn0HCJc "Канал із туторіалами по Unity (англ)")
+- [metanit.com](https://metanit.com/sharp/patterns/2.3.php "Цікавий сайт із купою матеріалів по програмуванню (рос)")  
+- [Jason Weimann, YouTube](https://youtu.be/ptkxRn0HCJc "Канал із туторіалами по Unity (англ)")
