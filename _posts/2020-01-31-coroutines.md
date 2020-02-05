@@ -2,7 +2,7 @@
 layout: post
 title:  "Coroutine() vs \"Coroutine\" vs nameof(Coroutine)"
 categories: Unity
-tags: unity сoroutine code c#
+tags: unity сoroutine c#
 author: Matanist
 ---
 
