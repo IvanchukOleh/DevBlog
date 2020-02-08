@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "How to use Tournaman"
-visible: 0
+title:  "How to use Tournaman 2.0"
+visible: 1
 permalink: /tournaman/
 categories: [Tournaman]
 tags: [tournaman, debate]
@@ -12,4 +12,4 @@ author: Matanist
 {:toc}
 
 ## Tournaman
-
+test post
