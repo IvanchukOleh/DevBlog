@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "GetComponent vs TryGetComponent та особливості оператора \"==\" для GameObject"
+visible: 1
 categories: Unity
 tags: unity editor profiler c# tip
 author: Matanist
