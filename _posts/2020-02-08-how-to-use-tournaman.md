@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Test title"
+title:  "How to use Tournaman"
 visible: 0
+permalink: /tournaman/
 categories: [Tournaman]
 tags: [tournaman, debate]
 author: Matanist
@@ -9,4 +10,6 @@ author: Matanist
 
 * content
 {:toc}
+
+## Tournaman
 
