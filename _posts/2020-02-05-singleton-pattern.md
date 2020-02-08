@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Singleton pattern in Unity3D"
+visible: 1
 categories: Unity
 tags: unity c# pattern singleton
 author: Matanist
