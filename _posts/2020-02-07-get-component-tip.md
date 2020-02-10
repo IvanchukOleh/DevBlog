@@ -2,8 +2,8 @@
 layout: post
 title:  "GetComponent vs TryGetComponent та особливості оператора \"==\" для GameObject"
 visible: 1
-categories: Unity
-tags: unity editor profiler c# tip
+categories: [Unity]
+tags: [unity, editor, profiler, c#, tip]
 author: Matanist
 ---
 
@@ -32,7 +32,7 @@ author: Matanist
 При виконанні перевірки ```myObject == null``` повернеться true, навіть якщо фактично C# змінна не рівна ```null``` *насправді*.  
 
 
-### Недоліки перевантаженого оператора ```==```
+## Недоліки перевантаженого оператора ```==```
 * це не інтуїтивно;
 * порівняння двох UnityEngine.Object між собою або перевірка на рівність ```null``` може бути значно повільнішою, ніж очікується;
 * перевантажений оператор ```==``` не є потокобезпечним *(примітка: можливо, це вже поправили, бо взято зі статті 2014 року. А може і не поправили.)*;
