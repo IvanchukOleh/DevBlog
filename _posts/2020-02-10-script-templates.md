@@ -41,8 +41,9 @@ public class ExampleScript : MonoBehaviour
 
 Для цього потрібно перейти в папку, де встановлена поточна версія Unity, далі ```Editor -> Data -> Resources -> ScriptTemplates```.  
 Приклад шляху до Unity 2019.3.0f6, встановленої через UnityHub:  
-```C:\Program Files\Unity\Hub\Editor\2019.3.0f6\Editor\Data\Resources\ScriptTemplates```
-В цій папці буде файл ```81-C# Script-NewBehaviourScript.cs.txt```. Вміст за замовчуванням:
+```C:\Program Files\Unity\Hub\Editor\2019.3.0f6\Editor\Data\Resources\ScriptTemplates```  
+В цій папці буде файл ```81-C# Script-NewBehaviourScript.cs.txt```.  
+Вміст за замовчуванням:
 ```c#
 using System.Collections;
 using System.Collections.Generic;
@@ -69,7 +70,7 @@ using UnityEngine;
 
 public class #SCRIPTNAME# : MonoBehaviour
 {
-	#region Variables
+    #region Variables
     #NOTRIM#
     #endregion
 
