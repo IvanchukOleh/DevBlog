@@ -9,7 +9,7 @@ layout: default
         <hr>
         <ul>
             {% for post in paginator.posts %}
-			{% if post.visible == 1 %}
+			{% if post.category != "hidden" %}
               <li>
                 <h2>
                   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
