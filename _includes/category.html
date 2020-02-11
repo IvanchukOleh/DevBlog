@@ -5,9 +5,7 @@
     {% endfor %}
   {% else %}
     {% for category in page.categories %}
-		{% if category != "Hidden" %}
-    	    <a href="{{ root_url }}/{{ site.category_dir }}#{{ category }}" title="Category: {{ category }}" rel="category">{{ category | join: "/" }}</a>{% unless forloop.last %}&nbsp;{% endunless %}
-		{% endif %}
+    	<a href="{{ root_url }}/{{ site.category_dir }}#{{ category }}" title="Category: {{ category }}" rel="category">{{ category | join: "/" }}</a>{% unless forloop.last %}&nbsp;{% endunless %}
     {% endfor %}
   {% endif %}
 {% endcapture %}

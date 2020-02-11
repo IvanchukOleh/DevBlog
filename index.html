@@ -9,7 +9,7 @@ layout: default
         <hr>
         <ul>
             {% for post in paginator.posts %}
-			{% if post.category != "Hidden" %}
+			{% if post.visible == 1 %}
               <li>
                 <h2>
                   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -92,7 +92,6 @@ layout: default
                 </div>
                 <ul class="content-ul" cate>
                     {% for category in site.categories %}
-					{% if category != "Hidden" %}
                     <li>
                         <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
                             <span class="name">
@@ -101,7 +100,6 @@ layout: default
                             <span class="badge">{{ category | last | size }}</span>
                         </a>
                     </li>
-					{% endif %}
                     {% endfor %}
                 </ul>
             </div>
