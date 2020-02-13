@@ -23,6 +23,8 @@ author: Matanist
 Найоптимальнішою і найзручнішою у використанні для мене є реалізація за допомогою [generic-класу](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-classes "Microsoft docs"):
   
 ```c#
+using UnityEngine;
+
 public class AutoCleanupSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T _instance;
