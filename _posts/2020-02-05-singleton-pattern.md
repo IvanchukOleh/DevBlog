@@ -90,5 +90,6 @@ SingletonClassExample.Instance.ExampleIntField
 Використання цього патерна доречне при створенні різних ігрових менеджерів.  
 
 ## Корисні посилання
-- [YouTube, Jason Weimann, особливості використання Singleton в Unity \(англ\)](https://youtu.be/ptkxRn0HCJc "Канал із туторіалами по Unity (англ)")
+- [YouTube, Jason Weimann, особливості використання Singleton в Unity \(англ\)](https://youtu.be/ptkxRn0HCJc "Канал із туторіалами по Unity (англ)")  
 - [metanit.com, стаття про Singleton \(рос\)](https://metanit.com/sharp/patterns/2.3.php "Цікавий сайт із купою матеріалів по програмуванню (рос)")  
+- [YouTube, Infallible Code, Everything You Need to Know About Singletons in Unity \(англ\)](https://www.youtube.com/watch?v=mpM0C6quQjs "Канал із туторіалами по Unity (англ)")
