@@ -20,10 +20,14 @@ author: Matanist
 
 ## Різні підходи  
 Розглянемо різні способи переведення ```SVector3``` у ```Vector3``` і навпаки:  
-1. Створити в класі ```SVector3``` статичні типу ```public static SVector3 From(Vector3 vector3)``` і ```public static Vector3 To(SVector3 vector3)```.  
+1. Створити в класі ```SVector3``` статичні метод ```public static SVector3 From(Vector3 vector3)``` і ```public static Vector3 To(SVector3 vector3)```.  
 В такому разі доведеться багато разів писати в коді довгий вираз із параметром:  
 ```c#
-SVector3 serializableVector = SVector3.To(myVector3)
+SVector3 serializableVector = SVector3.To(myVector3);
+```
+або  
+```c#
+Vector3 vector = SVector3.From(serializableVector3);
 ```
 Мені це здається не дуже зручним, тому в якийсь момент від такого підходу відмовився.  
 2. Створити конструктор із відповідним параметром ```public SVector3(Vector3 vector3)``` та метод ```public Vector3 ToVector3()```;  
@@ -35,9 +39,8 @@ Vector3 vector3 = mySVector3.ToVector3();
 ```c#
 SVector3 serializableVector = new SVector3(myVector3);
 ```
-що додає певних незручностей, бо знову потрібно вказувати додатково параметр.  
-3. Використати 2 варіант в комбінації із методами розширення для Vector3  
-Для переведення ```Vector3``` у ```SVector3``` можна створити статичний клас із методами розширення ```Vector3```:  
+що додає певних незручностей, бо знову потрібно вказувати додатково параметр і ключове слово ```new```  
+3. Використати 2 варіант в комбінації із методами розширення для ```Vector3``` при переведенні його у ```SVector3```:  
 ```c#
 public static class Vector3Extension
 {
@@ -47,7 +50,11 @@ public static class Vector3Extension
     }
 }
 ```
-Тепер можна буде, наприклад, написати ```transform.position.ToSVector3()``` і отримати серіалізовану позицію об’єкта.  
+Тепер можна буде, наприклад, написати  
+```c#
+SVector3 serializableVector = myVector3.ToSVector3();
+```
+Ніяких параметрів, ніяких ```new```.  
 
 ## Корисні посилання:  
 * [Extension Methods (C# Programming Guide)](https://docs.microsoft.com/uk-ua/dotnet/csharp/programming-guide/classes-and-structs/extension-methods "Документація Microsoft")
