@@ -64,3 +64,9 @@ UnityEngine.Debug.Log("<color=yellow>$CLASS$::$MEMBER$>></color> $SELECTION$$END
 //TODO: [$DATE$] $SELECTION$$END$
 ```
 ```$DATE$``` — current date and time in specified format [yyyy.MM.dd HH:mm]  
+
+**note**
+```c#
+//NOTE: [$DATE$] $SELECTION$$END$
+```
+```$DATE$``` — current date and time in specified format [yyyy.MM.dd HH:mm]  
