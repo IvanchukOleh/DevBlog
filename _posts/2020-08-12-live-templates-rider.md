@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Live templates in Rider"
+title:  "Live templates in JetBrains Rider"
 visible: 1
 categories: [Rider]
 tags: [rider, code, tip]
@@ -40,8 +40,27 @@ Settings -> Editor -> LiveTemplates -> C#
 
 ![Variables editing](/assets/2020-01-30-rider-live-templates-2.png)  
 
-## Приклад
-Приклад для виведення жовтих повідомлень:  
+## Ключові слова
+```$SELECTION$``` — те, що було виділено на час набирання скорочення  
+```$END$``` — точка, куди переведеться вказівник після введення всіх змінних, помічених як "Editable"  
+
+## Часто використовувані скорочення
+**log**  
 ```c#
-UnityEngine.Debug.Log("<color=yellow>$CLASS$::$MEMBER$>></color> $END$");
+UnityEngine.Debug.Log("$CLASS$::$MEMBER$>> $SELECTION$$END$");
 ```
+```$CLASS$``` — containing type name  
+```$MEMBER$``` — containing type member name  
+  
+**logyellow**  
+```c#
+UnityEngine.Debug.Log("<color=yellow>$CLASS$::$MEMBER$>></color> $SELECTION$$END$");
+```
+```$CLASS$``` — containing type name  
+```$MEMBER$``` — containing type member name  
+  
+**todo**
+```c#
+//TODO: [$DATE$] $SELECTION$$END$
+```
+```$DATE$``` — current date and time in specified format [yyyy.MM.dd HH:mm]  
