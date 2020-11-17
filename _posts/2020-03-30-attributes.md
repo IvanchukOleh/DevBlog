@@ -13,6 +13,7 @@ author: Matanist
 ## Атрибути:  
 * ```[InitializeOnLoad]```  
 * ```[RuntimeInitializeOnLoadMethod]```  
+* ```[InspectorName]```  
 
 
 
@@ -73,7 +74,23 @@ public class ExampleScript
 ```
 **Важливо:** при оголошенні декількох методів із однаковими параметрами порядок їх виклику відповідно до порядку в коді не гарантується.
 
+## InspectorName  
+Атрибут ```[InspectorName("<name>")]``` використовується, коли треба змінити назву елемента enum в інспекторі Unity.  
+
+Приклад:  
+```c#  
+public enum ModelImporterIndexFormat  
+{  
+    Auto = 0,  
+    [InspectorName("16 bits")]  
+    UInt16 = 1,  
+    [InspectorName("32 bits")]  
+    UInt32 = 2,  
+}  
+```  
+
 ## Корисні посилання:  
 * [Running Editor Script Code on Launch, Unity docs](https://docs.unity3d.com/Manual/RunningEditorCodeOnLaunch.html "Документація Unity")  
 * [RuntimeInitializeOnLoadMethodAttribute, Unity docs](https://low-scope.com/unity-tips-1-dont-use-your-first-scene-for-global-script-initialization "Документація Unity")  
+* [InspectorNameAttribute, Unity docs](https://docs.unity3d.com/ScriptReference/InspectorNameAttribute.html "Документація Unity")  
 * [Unity Tip: Don’t use your first scene for global Script initialization, Low scope blog](https://docs.unity3d.com/ScriptReference/RuntimeInitializeOnLoadMethodAttribute.html "Стаття, з якої взяв детальнішу інформацію")  
