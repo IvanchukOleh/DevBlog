@@ -68,15 +68,13 @@ public class #SCRIPTNAME# : MonoBehaviour
 ```c#
 using UnityEngine;
 
-public class #SCRIPTNAME# : MonoBehaviour
-{
+public class #SCRIPTNAME# : MonoBehaviour {
     #region Variables
     #NOTRIM#
     #endregion
 
     #region UnityMethods
-    private void Start()
-    {
+    private void Start() {
         #NOTRIM#
     }
     #endregion
