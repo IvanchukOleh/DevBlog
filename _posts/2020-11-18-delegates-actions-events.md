@@ -22,7 +22,7 @@ author: Matanist
 ### Оголошення
 Оголошення делегата є "заготовкою", що містить сигнатуру функції. Наприклад, делегат із одним параметром типу ```int```, що повертає значення типу ```string```:
 ```c#  
-public delegate string MyDelegate(int patam);  
+public delegate string MyDelegate(int param);  
 ```  
 Після створення "заготовки" потрібно створити екземпляр делегата:
 ```c#  
@@ -34,7 +34,7 @@ public string MyFunc(int param) {
     return param.ToString();
 }
 
-public void Start(){
+public void Start() {
     Delegate1 = MyFunc;
 }
 ```  
@@ -47,8 +47,9 @@ Delegate1 = delegate(int param) {
 Із C# 3.0 також можна присвоювати лямбда-вирази:
 ```c#  
 Delegate1 = value => value.ToString();
-};
 ```  
+
+Одному делегату можна присвоювати декілька значень. 
 ## Actions  
   
 ## Events  
