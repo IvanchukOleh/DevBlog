@@ -1,7 +1,8 @@
 ---
 layout: post
-visible: 1
 title:  "Delegates, actions and events"
+visible: 0
+permalink: /delegates/
 categories: [Unity]
 tags: [c#, code, delegate, action, event]
 author: Matanist
@@ -18,7 +19,25 @@ author: Matanist
 - event — це елемент, який надає можливість класу (відправнику) надсилати сповіщення іншим класам (отримувачам, обробникам подій).  
   
 ## Delegates  
-  
+### Оголошення
+Оголошення делегата є "заготовкою", що містить сигнатуру функції. Наприклад, делегат із одним параметром типу ```int```, що повертає значення типу ```string```:
+```c#  
+public delegate string MyDelegate(int patam);  
+```  
+Після створення "заготовки" потрібно створити екземпляр делегата:
+```c#  
+public MyDelegate Delegate1;
+```  
+Далі створеному делегату можна присвоювати значення методу, який відповідає вказаній сигнатурі:
+```c#  
+public string MyFunc(int param) {
+    return param.ToString();
+}
+
+public void Start(){
+    Delegate1 = MyFunc;
+}
+```  
 ## Actions  
   
 ## Events  
