@@ -38,6 +38,17 @@ public void Start(){
     Delegate1 = MyFunc;
 }
 ```  
+Із C# 2.0 делегату можна присвоювати анонімні методи:  
+```c#  
+Delegate1 = delegate(int param) {
+    return param.ToString();
+};
+```  
+Із C# 3.0 також можна присвоювати лямбда-вирази:
+```c#  
+Delegate1 = value => value.ToString();
+};
+```  
 ## Actions  
   
 ## Events  
