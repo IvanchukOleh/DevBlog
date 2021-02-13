@@ -13,7 +13,7 @@ author: Matanist
 ## Суть проблеми
 При показі поточного повороту об’єкта в ```Custom Editor``` часто можна бачити, що в інспекторі Unity в ```Transform``` показується геть інше значення, ніж ```rotation.eulerAngles``` чи ```localRotation.eulerAngles``` у власному редакторі.
 
-##Рішення
+## Рішення
 ```c#
 UnityEditor.TransformUtils
 public static Vector3 GetInspectorRotation(Transform t);
