@@ -25,5 +25,5 @@ public static void SetInspectorRotation(Transform t, Vector3 r);
 
 
 Посилання:
-[UnityDocs](https://docs.unity3d.com/ScriptReference/TransformUtils.html")
+[UnityDocs](https://docs.unity3d.com/ScriptReference/TransformUtils.html)
 
