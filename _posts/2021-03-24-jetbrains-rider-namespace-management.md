@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Namespace management in GetBrains Rider"
+title:  "Namespace management in JetBrains Rider"
 visible: 1
 categories: Unity
 tags: [unity, tip, code, rider, jetbrains]
