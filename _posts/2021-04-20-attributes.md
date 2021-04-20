@@ -14,6 +14,7 @@ author: Matanist
 * ```[InitializeOnLoad]```  
 * ```[RuntimeInitializeOnLoadMethod]```  
 * ```[InspectorName]```  
+* ```[MenuItem("...")]```  
 
 
 
@@ -88,9 +89,32 @@ public enum ModelImporterIndexFormat
     UInt32 = 2,  
 }  
 ```  
+## MenuItem
+Атрибут ```[MenuItem("<name>")]``` дозволяє додати ```статичний``` метод до випадаючого меню редактора. Через ```/``` задається шлях (ієрархія) пункту меню.  
+```c#
+[MenuItem("MyMenu/Do Something")]
+static void DoSomething()
+{
+    Debug.Log("Doing Something...");
+}
+```
+Додатково можна задати для методу відповідну клавішу/комбінацію клавіш. 
+Для цього в кінці назви методу треба додати символ 
+```%```(ctrl on Windows, cmd on macOS), 
+```#```(shift) або 
+```&```(alt) і додати позначення клавіші. 
+Якщо потрібно задати клавішу без ```ctrl```, ```shift``` чи ```alt```, 
+перед позначенням клавіші треба додати символ ```_```.  
+Можна додавати клавіші не лише з буквами, а й деякі спеціальні:  
+```LEFT```, ```RIGHT```, ```UP```, ```DOWN```, ```F1``` .. ```F12```, ```HOME```, ```END```, ```PGUP```, ```PGDN```.  
+Приклади:
+- ...```"MyMenu/DoSomething %d"``` - комбінація Ctrl+D;
+- ...```"MyMenu/DoSomething _d"``` - лише клавіша D;
+- ...```"MyMenu/DoSomething #LEFT"``` - комбінація Shift+Left;
 
 ## Корисні посилання:  
 * [Running Editor Script Code on Launch, Unity docs](https://docs.unity3d.com/Manual/RunningEditorCodeOnLaunch.html "Документація Unity")  
 * [RuntimeInitializeOnLoadMethodAttribute, Unity docs](https://low-scope.com/unity-tips-1-dont-use-your-first-scene-for-global-script-initialization "Документація Unity")  
 * [InspectorNameAttribute, Unity docs](https://docs.unity3d.com/ScriptReference/InspectorNameAttribute.html "Документація Unity")  
 * [Unity Tip: Don’t use your first scene for global Script initialization, Low scope blog](https://docs.unity3d.com/ScriptReference/RuntimeInitializeOnLoadMethodAttribute.html "Стаття, з якої взяв детальнішу інформацію")  
+* [UnityEditor.MenuItem, UnityDocs](https://docs.unity3d.com/ScriptReference/MenuItem.html)  
