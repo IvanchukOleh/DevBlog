@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Drawing in CustomEditor"
 visible: 1
-categories: Unity
+title: "Drawing in CustomEditor"
+categories: [Unity]
 tags: [unity, editor, tip]
 author: Matanist
 ---
