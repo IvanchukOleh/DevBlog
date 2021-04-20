@@ -63,7 +63,7 @@ public class AutoCleanupSingleton<T> : MonoBehaviour where T : MonoBehaviour
 }
 ```
   
-Використання generic-класу дозволяє уникнути багаторазового дублювання однакового коду в кожному класі, який має бути сінглтоном. Достатньо вказати, що клас буде наслідуватись від ```AutoCleanupSingleton<T>()```, де ```T``` — ім’я класу:
+Використання generic-класу дозволяє уникнути багаторазового дублювання однакового коду в кожному класі, який має бути "Одинаком". Достатньо вказати, що клас буде наслідуватись від ```AutoCleanupSingleton<T>()```, де ```T``` — ім’я класу:
   
 ```c#
 public class SingletonClassExample : AutoCleanupSingleton<SingletonClassExample>

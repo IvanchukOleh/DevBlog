@@ -2,7 +2,7 @@
 layout: post
 title:  "Namespace management in JetBrains Rider"
 visible: 1
-categories: Unity
+categories: Rider
 tags: [unity, tip, code, rider, jetbrains]
 author: Matanist
 ---
