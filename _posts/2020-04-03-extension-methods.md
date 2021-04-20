@@ -2,8 +2,8 @@
 layout: post
 visible: 1
 title:  "Extension methods"
-categories: [Unity]
-tags: [c#, tip]
+categories: [Code]
+tags: [c#, code, tip]
 author: Matanist
 ---
 
