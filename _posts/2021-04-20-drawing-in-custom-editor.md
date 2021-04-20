@@ -1,24 +1,24 @@
 ---
-layout: post 
+layout: post
 title:  "Drawing in CustomEditor"
-visible: 1 
-categories: Unity 
+visible: 1
+categories: Unity
 tags: [unity, editor, tip]
 author: Matanist
 ---
 
-* content 
+* content
   {:toc}
 
 ## Завдання
 
 Інколи звичних полів інспектора не вистачає і треба краще візуалізувати дані. Наприклад, намалювати графік, чи будь-що
 інше. В цьому допоможе низькорівнева графічна бібліотека UnityEngine.GL.
-  
-  
-  
-  
-  
+
+
+
+
+
 ## Використання
 
 Для малювання у власному редакторі потрібно перевантажити метод OnInspectorGUI. Послідовність дій така:
@@ -62,18 +62,20 @@ private void OnDisable() {
 }
 
 public override void OnInspectorGUI() {
-    //визначення розмірів області для малювання
-    //перші два параметри GUILayoutUtility.GetRect(...), що відповідають за ширину, будуть використовуватись лише тоді, 
-    //коли цей rect розміщений всередині іншого (Horizontal) і він містить FlexibleSpace. Інакше блок розтягнеться по ширині.
+    //визначення розмірів області для малювання. 
+    //Перші два параметри (ширина) тут ігноруються:
+    Rect rect = GUILayoutUtility.GetRect(200, 200, 200, 200);
+    //блок фіксованої ширини з вирівнюванням по лівому краю:
     //EditorGUILayout.BeginHorizontal();
     //Rect rect = GUILayoutUtility.GetRect(200, 200, 200, 200);
     //...
     //GUILayout.FlexibleSpace();
     //EditorGUILayout.EndHorizontal();
-    Rect rect = GUILayoutUtility.GetRect(200, 200, 200, 200);
+    
     Vector2 center = new Vector2(rect.width * 0.5f, rect.height * 0.5f);
 
-    //OnInspectorGUI викликається дещо частіше, ніж перемальовується редактор, тому потрібна додаткова перевірка
+    //OnInspectorGUI викликається дещо частіше, ніж перемальовується редактор, 
+    //тому потрібна додаткова перевірка:
     if (Event.current.type == EventType.Repaint) {
         //відкриття області для малювання. 
         //Початок координат у верхньому лівому куті
@@ -128,4 +130,5 @@ public override void OnInspectorGUI() {
 - [UnityDocs, UnityEngine.GL](https://docs.unity3d.com/ScriptReference/GL.html)  
 - [UnityDocs, UnityEngine.GL.PopMatrix](https://docs.unity3d.com/ScriptReference/GL.PopMatrix.html)  
 - [UnityDocs, UnityEngine.GL.PushMatrix](https://docs.unity3d.com/ScriptReference/GL.PushMatrix.html)  
+- [UnityDocs, EventType.Repaint](https://docs.unity3d.com/ScriptReference/EventType.Repaint.html)  
 - [UnityAnswers, How to draw lines in a custom Inspector](https://answers.unity.com/questions/1360515/how-do-i-draw-lines-in-a-custom-inspector.html)  
