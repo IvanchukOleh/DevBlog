@@ -1,10 +1,14 @@
 ---
-layout: post title:  "Drawing in CustomEditor"
-visible: 1 categories: Unity tags: [unity, editor, tip, code]
+layout: post 
+title:  "Drawing in CustomEditor"
+visible: 1 
+categories: Unity 
+tags: [unity, editor, tip]
 author: Matanist
 ---
 
-* content {:toc}
+* content 
+  {:toc}
 
 ## Завдання
 
