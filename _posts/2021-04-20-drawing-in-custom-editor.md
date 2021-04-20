@@ -11,7 +11,6 @@ author: Matanist
   {:toc}
 
 ## Завдання
-
 Інколи звичних полів інспектора не вистачає і треба краще візуалізувати дані. Наприклад, намалювати графік, чи будь-що
 інше. В цьому допоможе низькорівнева графічна бібліотека UnityEngine.GL.
 
@@ -20,7 +19,6 @@ author: Matanist
 
 
 ## Використання
-
 Для малювання у власному редакторі потрібно перевантажити метод OnInspectorGUI. Послідовність дій така:
 
 - ```OnEnable()```
@@ -38,7 +36,6 @@ author: Matanist
     - закриття області для малювання.
 
 ## Приклад
-
 Малювання системи координат висотою 200 пікселів із лінійним графіком:
 
 ![Example](/assets/2021-04-20-drawing-in-custom-editor-0.png)
@@ -126,7 +123,6 @@ public override void OnInspectorGUI() {
 ```
 
 ## Корисні посилання:
-
 - [UnityDocs, UnityEngine.GL](https://docs.unity3d.com/ScriptReference/GL.html)  
 - [UnityDocs, UnityEngine.GL.PopMatrix](https://docs.unity3d.com/ScriptReference/GL.PopMatrix.html)  
 - [UnityDocs, UnityEngine.GL.PushMatrix](https://docs.unity3d.com/ScriptReference/GL.PushMatrix.html)  
